@@ -1,12 +1,12 @@
 #include "ultrasonic.h"
 
-void ultrasonicInit() {
+void ultrasonicInit(int TRIG_PIN, int ECHO_PIN) {
   // configure ultrasonic pins
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
 }
 
-float readDistanceCM() {
+float readDistanceCM(int TRIG_PIN, int ECHO_PIN) {
   // Set TRIG low 
   digitalWrite(TRIG_PIN, LOW);
   delayMicroseconds(2);
